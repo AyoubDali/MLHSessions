@@ -20,6 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="assets/js/login.js"></script>
 <script src="assets/js/jquery.easydropdown.js"></script>
+
 <!--Animation-->
 <script src="assets/js/wow.min.js"></script>
 <link href="assets/css/animate.css" rel='stylesheet' type='text/css' />
@@ -36,11 +37,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					 <div class="menu">
 						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
 						    <ul class="nav" id="nav">
-						    	<li class="active"><a href="index.html">Reality</a></li>
-						    	<li><a href="living.html">Living</a></li>
-						    	<li><a href="education.html">Education</a></li>
-						    	<li><a href="entertain.html">Entertainment</a></li>
-						    	<li><a href="404.html">Mobility</a></li>
+						    	<li class="active"><a href="index.html">Home</a></li>
+						    	<li><a href="living.html">Recommended for you</a></li>
 								<div class="clearfix"></div>
 							</ul>
 							<script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -58,7 +56,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	            <div class="col-sm-4 header_right">
 	    		      <div id="loginContainer"><a href="#" id="loginButton"><img src="assets/images/login.png"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm">
+						        <form id="loginForm" method="GET">
 						                <fieldset id="body">
 						                	<fieldset>
 						                          <label for="email">Email Address</label>
@@ -68,7 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						                            <label for="password">Password</label>
 						                            <input type="password" name="password" id="password">
 						                     </fieldset>
-						                    <input type="submit" id="login" value="Sign in">
+											 <a routerLink="/adminHome" id="login" >Sign in</a>
 						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
 						            	</fieldset>
 						                 <span><a href="#">Forgot your password?</a></span>
@@ -94,14 +92,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    		    <div class="clearfix"></div>
          </div>
    </div>
+   
    <div class="content_top">
    	  <div class="container">
-   		<div class="col-md-4 bottom_nav">
-   		   <div class="content_menu">
-				<ul>
-					<li class="active" style="font-size: large;"><a href="#">Todays Sessions </a></li> 
-				</ul>
-			</div>
+   		<div class="col-md-12">
+			<div class="menu">
+				<a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+				  <ul class="nav" id="nav">
+					  <li class="active"><a href="index.html">Home</a></li>
+					  <li><a data-toggle="modal" data-target="#myModal">Add a recorded session</a></li>
+					  <div class="clearfix"></div>
+				  </ul>
+		  </div>	
 		</div>
    	</div>
    </div>
@@ -223,7 +225,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    				 	 </ul>
    				  </div>
    			   </div>
-			   </div>
 			</a>
 			<a href="">
    			<div class="col-md-6">
@@ -247,31 +248,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    		  	  	 <li><i class="icon1"> </i><span class="one"> </span></li>
    		  	  	 <li><i class="icon2"> </i><span class="two"> </span></li>
    		  	  	 <li><i class="icon3"> </i><span class="three"> </span></li>
-   		  	  	 <li><i class="icon4"> </i><span class="four"> </span></li>
-   		  	  	 <li><i class="icon5"> </i></li>
    		  	  </ul>
-   		  	  <div class="real">
-   		  	  	<h4>Reality</h4>
-   		  	  	<div class="col-sm-6">
-   		  	  	  <ul class="service_grid">
-   	   				<i class="s1"> </i>
-   	   				 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
-   	   				   <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
-   	   				 </li>
-   	   				 <div class="clearfix"> </div>
-   	   			   </ul>
-   	   			 </div>
-   	   			 <div class="col-sm-6">
-   		  	  	  <ul class="service_grid">
-   	   				<i class="s2"> </i>
-   	   				 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
-   	   				   <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
-   	   				 </li>
-   	   				 <div class="clearfix"> </div>
-   	   			   </ul>
-   	   			 </div>
-   	   			 <div class="clearfix"> </div>
-   	   			 </div>
    		  	  </div>
    		  </div>
    	  </div>
@@ -284,7 +261,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<span>
 			<i><img src="images/mail.png" alt=""></i>
 		    <input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
-		    <label class="btn1 btn2 btn-2 btn-2g"> <input name="submit" type="submit" id="submit" value="Subscribe"> </label>
+		    <label class="btn1 btn2 btn-2 btn-2g"> <input name="submit" type="submit" value="Subscribe"> </label>
 		    <div class="clearfix"> </div>
 		</span>			 	    
 	   </form>
@@ -326,5 +303,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	   </div>
       </div>
    </div>
+
+   <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  ...
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Save changes</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </body>
 </html>		
