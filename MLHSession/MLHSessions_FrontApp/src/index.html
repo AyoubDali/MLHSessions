@@ -20,7 +20,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="assets/js/login.js"></script>
 <script src="assets/js/jquery.easydropdown.js"></script>
-
 <!--Animation-->
 <script src="assets/js/wow.min.js"></script>
 <link href="assets/css/animate.css" rel='stylesheet' type='text/css' />
@@ -92,7 +91,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    		    <div class="clearfix"></div>
          </div>
    </div>
-   
    <div class="content_top">
    	  <div class="container">
    		<div class="col-md-12">
@@ -100,7 +98,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
 				  <ul class="nav" id="nav">
 					  <li class="active"><a href="index.html">Home</a></li>
-					  <li><a data-toggle="modal" data-target="#myModal">Add a recorded session</a></li>
+					  <li><a>Add a recorded session</a></li>
 					  <div class="clearfix"></div>
 				  </ul>
 		  </div>	
@@ -225,6 +223,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    				 	 </ul>
    				  </div>
    			   </div>
+			   </div>
 			</a>
 			<a href="">
    			<div class="col-md-6">
@@ -261,7 +260,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<span>
 			<i><img src="images/mail.png" alt=""></i>
 		    <input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
-		    <label class="btn1 btn2 btn-2 btn-2g"> <input name="submit" type="submit" value="Subscribe"> </label>
+		    <label class="btn1 btn2 btn-2 btn-2g"> <input name="submit" type="submit" id="submit" value="Subscribe"> </label>
 		    <div class="clearfix"> </div>
 		</span>			 	    
 	   </form>
@@ -304,27 +303,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
    </div>
 
-   <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-		  ...
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  <button type="button" class="btn btn-primary">Save changes</button>
-		</div>
-	  </div>
-	</div>
+   <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+</div>
 </body>
 </html>		
