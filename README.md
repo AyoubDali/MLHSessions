@@ -1,8 +1,7 @@
 # MLH Session
-> Short blurb about what your product does.
+MLH session is a web app which offer a more practical way to fellow MLH sessions. 
+Using Discord session channel can be a little be frutstrating and it doesn't offer a way to rewatch previous sessions
 
-
-One to two paragraph statement about your product and what it does.
 
 ![](img/screen-shot.png)
 
